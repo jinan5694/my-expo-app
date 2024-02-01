@@ -10,7 +10,7 @@ export default function DelNavigationBar({
 }: NativeStackHeaderProps) {
   const title = getHeaderTitle(options, route.name);
   return (
-    <Appbar.Header>
+    <Appbar.Header elevated>
       {back ? <Appbar.BackAction onPress={() => router.back()} /> : null}
       <Appbar.Content title={title} />
     </Appbar.Header>
