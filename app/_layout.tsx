@@ -12,7 +12,7 @@ import { PaperProvider } from "react-native-paper";
 
 import { useColorScheme } from "@/components/useColorScheme";
 
-import DelNavigationBar from "@/components/DelNavigationBar";
+import NativeStackHeader from "@/components/NativeStackHeader";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -59,7 +59,7 @@ function RootLayoutNav() {
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
         <Stack
           screenOptions={{
-            header: (props) => <DelNavigationBar {...props} />,
+            header: (props) => <NativeStackHeader {...props} />,
           }}
         >
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
