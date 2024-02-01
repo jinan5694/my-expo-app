@@ -7,8 +7,34 @@ import {
 } from "react-native";
 
 import { Text, View } from "@/components/Themed";
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import { ActivityIndicator } from "react-native-paper";
+
+type ItemProps = { title: string };
+
+const Item = memo(({ title }: ItemProps) => {
+  console.log("render item");
+
+  return (
+    <View
+      style={{
+        backgroundColor: "#f9c2ff",
+        padding: 20,
+        marginVertical: 8,
+        marginHorizontal: 16,
+      }}
+      key={title}
+    >
+      <Text
+        style={{
+          fontSize: 32,
+        }}
+      >
+        {title}
+      </Text>
+    </View>
+  );
+});
 
 type Item = {
   id: number;
@@ -35,14 +61,6 @@ async function queryList(page: number, pageSize: number = 10) {
     }, 500);
   });
 }
-
-type ItemProps = { title: string };
-
-const Item = ({ title }: ItemProps) => (
-  <View style={styles.item}>
-    <Text style={styles.title}>{title}</Text>
-  </View>
-);
 
 export default function TabOneScreen() {
   // 数据
