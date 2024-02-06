@@ -1,4 +1,4 @@
-import { Appbar } from "react-native-paper";
+import { Appbar, Text } from "react-native-paper";
 import type { NativeStackHeaderProps } from "@react-navigation/native-stack";
 import { getHeaderTitle } from "@react-navigation/elements";
 import { router } from "expo-router";
