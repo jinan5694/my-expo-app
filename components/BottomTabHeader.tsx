@@ -8,7 +8,7 @@ export default function DelNavigationBar({
 }: BottomTabHeaderProps) {
   const title = getHeaderTitle(options, route.name);
   return (
-    <Appbar.Header elevated>
+    <Appbar.Header elevated mode="center-aligned">
       <Appbar.Content title={title}></Appbar.Content>
       <Appbar.Action icon="dots-vertical" onPress={() => {}} />
     </Appbar.Header>

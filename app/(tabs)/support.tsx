@@ -6,7 +6,7 @@ export default function TabSupportScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab Support</Text>
-      <Button onPress={() => router.push("/Detail")}>modal</Button>
+      <Button onPress={() => router.push("/profile")}>outer support</Button>
     </View>
   );
 }
