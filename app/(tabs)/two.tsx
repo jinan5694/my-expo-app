@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 import EditScreenInfo from "@/components/EditScreenInfo";
 import { Text, View } from "@/components/Themed";
-import { Button } from "react-native-paper";
+import { Button, Text as PaperText } from "react-native-paper";
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { router } from "expo-router";
 
@@ -12,7 +12,10 @@ export default function TabTwoScreen({
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab Two</Text>
-      <Button onPress={() => router.push("/Detail")}>modal</Button>
+      <Button mode="contained" onPress={() => router.push("/Detail")}>
+        modal
+      </Button>
+      <PaperText>hello</PaperText>
       <View
         style={styles.separator}
         lightColor="#eee"
